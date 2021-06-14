@@ -17,6 +17,7 @@ public class HelloController {
             @RequestHeader("userName")String userName,
             @RequestBody SayHelloVo sayHelloVo){
         System.out.println("Hello dubbo consumer controller^……^");
+        System.out.println("acceptLanguage::"+acceptLanguage);
         return helloService.sayHello(sayHelloVo,acceptLanguage,userName);
     }
 }
